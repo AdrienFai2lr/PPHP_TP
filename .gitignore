@@ -1,0 +1,4 @@
+# Ignorer les fichiers binaires
+/bin/
+/*.o
+/*.out
