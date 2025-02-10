@@ -7,9 +7,9 @@
 #define PAS 200
 #define NBELEM 2000
 #define ITA 6
-#define ITB 7
-#define ITC 7
-#define ITD 2
+#define ITB 3
+#define ITC 5
+#define ITD 7
 #define ITE 1
 
 int M1[NBELEM][NBELEM], M2[NBELEM][NBELEM], M3[NBELEM][NBELEM], 
