@@ -11,3 +11,5 @@ D : PAS×ITD×PAS×ITD×PAS×ITDPAS×ITD×PAS×ITD×PAS×ITD
 E : PAS×ITE×PAS×ITE×PAS×ITEPAS×ITE×PAS×ITE×PAS×ITE
 
 1.3.2) résultats calculés dans le code 
+
+jsp comment comparer les résultats obtenus avec ceux théoriques 
