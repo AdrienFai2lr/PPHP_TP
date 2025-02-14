@@ -44,7 +44,7 @@ int main(void) {
     double start, end, tempsSeq, tempsParallel, tempsParallelV2, tempsParallelV3;
     
     ncores = omp_get_num_procs();
-    printf("%d coeurs disponibles\n", ncores);
+    printf("%d threads disponibles\n", ncores);
     
     // Initialisation des matrices
     init2D(M1); init2D(M2); init2D(M3); 
@@ -110,7 +110,7 @@ int main(void) {
         }
     }
     printf("Temps séquentiel : %g secondes\n", tempsSeq);
-    printf("Résultat séquentiel : %lld\n", res_seq);
+    printf("Résultat séquentiel : %llu\n", res_seq);
     
 
 
@@ -193,7 +193,7 @@ int main(void) {
     
     // Affichage des résultats et comparaisons
     printf("Temps parallèle : %g secondes\n", tempsParallel);
-    printf("Résultat parallèle : %lld\n", res_par);
+    printf("Résultat parallèle : %llu\n", res_par);
     printf("\n=== Comparaisons ===\n");
     printf("Accélération : %g\n", tempsSeq/tempsParallel);
     printf("Efficacité : %g\n", (tempsSeq/tempsParallel)/3);
@@ -295,7 +295,7 @@ int main(void) {
     printf ("\n === temps et résultat ===\n");
     // Affichage des résultats et comparaisons
     printf("Temps parallèle V2: %g secondes\n", tempsParallelV2);
-    printf("Résultat parallèle V2 : %lld\n", res_parV2);
+    printf("Résultat parallèle V2 : %llu\n", res_parV2);
     printf("Vérification résultats : %s\n", (res_seq == res_parV2) ? "OK" : "ERREUR");
 
     printf("\n=== Comparaisons avec la version séquentielle ===\n");
@@ -306,7 +306,7 @@ int main(void) {
    
    
 
-    printf("\n=== Version parallèle V3 basé sur la V1 ===\n");
+    printf("\n=== Version parallèle V3 ===\n");
     // Réinitialisation des matrices pour version parallèle
     raz2D(A); raz2D(B); raz2D(C); raz2D(D); raz2D(E);
     
@@ -397,7 +397,7 @@ int main(void) {
     
     // Affichage des résultats et comparaisons
     printf("Temps v3: %g secondes\n", tempsParallelV3);
-    printf("Résultat v3 : %lld\n", res_parV3);
+    printf("Résultat v3 : %llu\n", res_parV3);
     printf("\n=== Comparaisons ===\n");
     printf("Accélération v3: %g\n", tempsSeq/tempsParallelV3);
     printf("Efficacité v3 : %g\n", (tempsSeq/tempsParallelV3)/3);
